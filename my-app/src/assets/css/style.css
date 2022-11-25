@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(29, 29, 29);
+}
+
+.main {
+    height: 100vh;
+    width: 100vw;
+}
+
+.name {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 6px;
+}
+
+.left-side {
+    background-color: rgb(50, 50, 50);
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.left-side .data {
+    padding: 120px 80px 0 150px;
+}
+
+.no-gutter>[class*='col-'] {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.left-side .logo {
+    width: 240px;
+    height: 54px;
+    margin-left: -10px;
+    margin-bottom: 10px;
+}
+
+.left-side .dummy-text {
+    color: white;
+}
+
+.left-side .read-more a {
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    font-size: 12px;
+    padding: 10px 25px;
+    border-radius: 5px;
+}
+
+.left-side .circle1 {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 64%;
+}
+
+.left-side .circle2 {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 60%;
+}
+
+
+
+
+.right-side {
+    background-color: var(--background-color-secondary);
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.right-side .content{
+    padding: 80px 55px 10px 55px;
+}
+
+.right-side .mbl-view{
+    padding: 20px 20px 0 20px;
+}
+
+.right-side .mbl-view h5{
+    color: yellow;
+    background-color: rgb(34, 34, 34);
+    padding: 15px;
+    
+    text-align: center;
+}
+
+.right-side h4 {
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--text-primary-color);
+}
+
+.right-side p {
+    margin-bottom: 20px;
+    font-size: 15px;
+    color: var(--text-primary-color);
+}
+
+.right-side form .form-group {
+    position: relative;
+}
+
+.right-side form .form-group .fa {
+    font-size: 14px;
+    position: absolute;
+    top: 35%;
+    padding-left: 18px;
+    color: rgb(188, 188, 188);
+}
+
+.right-side form input {
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 13px 36px;
+    font-size: 14px;
+    outline: none;
+    background-color: var(--background-color-secondary);
+}
+
+.sh-icon .fa {
+    position: absolute;
+    top: 0%;
+    right: 5%;
+}
+
+.right-side form .verify {
+    display: flex;
+    gap: 30px;
+}
+
+.right-side form input::placeholder {
+    color: var(--text-primary-color);
+}
+
+.resend-btn {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.resend-btn a {
+    color: black;
+    text-decoration: none;
+}
+
+.button {
+    width: 100%;
+    height: 46px;
+    color: black;
+    background-color: rgb(252, 252, 24);
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.end-para {
+    color: gray;
+    font-size: 12px;
+    margin-top: 18px;
+    text-align: center;
+}
+
+.end-para a {
+    text-decoration: none;
+    color: var(--text-primary-color);
+    font-weight: bold;
+    font-size: 14px;
+}
+
+section form .code {
+    display: flex;
+    gap: 10px;
+}
+
+section form .code input {
+    padding: 10px;
+    text-align: center;
+}
+
+section .resend-btn {
+    margin-top: 17px;
+    text-align: center;
+}
+
+section .resend-btn button.resend {
+    text-align: center;
+    color: black;
+    border: none;
+    background-color: transparent;
+    font-size: 12px;
+}
+
+.right-side form .updated {
+    text-align: center;
+}
+
+.right-side form .updated .icon-updated img {
+    margin-bottom: 12px;
+    color: var(--text-primary-color);
+}
+
+.right-side .text-center {
+    text-decoration: none;
+    color: var(--text-primary-color);
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.mbl-circle .circle1 {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 74%;
+    left: -25%;
+}
+
+.mbl-circle .circle2 {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 70%;
+    left: -25%;
+}
+
+
+@media screen and (max-width: 767px){
+    .form-control{
+     padding: 6px;
+        width: 100%;
+        height: 48px;
+        background: #FFFFFF;
+        border: 1px solid #00000b;
+        border-radius: 2px;
+   }
+   .right-side .content{
+    padding-top: 0;
+   }
+ }
