@@ -29,33 +29,70 @@
                 <darkMode />
                 <h4>Hello Again!</h4>
                 <p>Welcome Back</p>
-                <form @submit.prevent="Login">
-                  <div class="form-group">
-                    <div class="form-icon">
-                      <!-- <img src="../../assets/images/name-icon.png" alt="" /> -->
-                      <i class="fa fa-envelope-o"></i>
-                    </div>
-                    <input
-                      type="email"
-                      class="form-control"
-                      id="email"
-                      placeholder="Email Address"
-                      autocomplete="off"
-                      v-model.trim="$v.details.email.$model"
-                      :class="{
-                        'is-invalid': $v.details.email.$error,
-                        'is-valid': !$v.details.email.$invalid,
-                      }"
-                    />
-                    <!-- <div class="valid-feedback">Your full name is valid</div> -->
-                    <div class="invalid-feedback">
-                      <span v-if="!$v.details.email.required"
-                        >Email is required</span
-                      >
-                      <span v-if="!$v.details.email.email"
-                        >Email must be valid</span
-                      >
-                      <!-- <span v-if="!$v.details.email.minLength"
+                <form @submit.prevent="submit">
+                <div class="form-group">
+                  <div class="v-inputs">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="email"
+                    placeholder="Email Address"
+                    autocomplete="off"
+                    v-model.trim="$v.details.email.$model"
+                    :class="{
+                      'is-invalid': $v.details.email.$error,
+                      'is-valid': !$v.details.email.$invalid,
+                    }"
+                  />
+
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="email"
+                    placeholder="Email Address"
+                    autocomplete="off"
+                    v-model.trim="$v.details.email.$model"
+                    :class="{
+                      'is-invalid': $v.details.email.$error,
+                      'is-valid': !$v.details.email.$invalid,
+                    }"
+                  />
+
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="email"
+                    placeholder="1"
+                    autocomplete="off"
+                    v-model.trim="$v.details.email.$model"
+                    :class="{
+                      'is-invalid': $v.details.email.$error,
+                      'is-valid': !$v.details.email.$invalid,
+                    }"
+                  />
+
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="email"
+                    placeholder="Email Address"
+                    autocomplete="off"
+                    v-model.trim="$v.details.email.$model"
+                    :class="{
+                      'is-invalid': $v.details.email.$error,
+                      'is-valid': !$v.details.email.$invalid,
+                    }"
+                  />
+                  </div>
+                  <!-- <div class="valid-feedback">Your full name is valid</div> -->
+                  <div class="invalid-feedback">
+                    <span v-if="!$v.details.email.required"
+                      >Email is required</span
+                    >
+                    <span v-if="!$v.details.email.email"
+                      >Email must be valid</span
+                    >
+                    <!-- <span v-if="!$v.details.email.minLength"
                   >Full name must have at least
                   {{ $v.details.email.$params.minLength.min }} letters</span
                 >
@@ -63,66 +100,31 @@
                   >Full name must have at most
                   {{ $v.details.email.$params.maxLength.max }} letters</span
                 > -->
-                    </div>
                   </div>
+                </div>
 
-                  <div class="form-group">
-                    <div class="form-icon">
-                      <!-- <img src="../../assets/images/name-icon.png" alt="" /> -->
-                      <i class="fa fa-lock"></i>
-                    </div>
-                    <input
-                      type="password"
-                      class="form-control"
-                      id="password"
-                      placeholder="Password"
-                      autocomplete="off"
-                      v-model.trim="$v.details.password.$model"
-                      :class="{
-                        'is-invalid': $v.details.password.$error,
-                        'is-valid': !$v.details.password.$invalid,
-                      }"
-                    />
-                    <!-- <div class="valid-feedback">Your full name is valid</div> -->
-                    <div class="invalid-feedback">
-                      <span v-if="!$v.details.password.required"
-                        >Password is required</span
-                      >
-                      <span v-if="!$v.details.password.minLength"
-                        >Password must have at least
-                        {{ $v.details.password.$params.minLength.min }}
-                        letters</span
-                      >
-                      <span v-if="!$v.details.password.maxLength"
-                        >Password must have at most
-                        {{ $v.details.password.$params.maxLength.max }}
-                        letters</span
-                      >
-                    </div>
-                  </div>
 
-                  <button
-                    class="button"
-                    type="submit"
-                    @click="Login()"
-                    :disabled="submitStatus === 'PENDING'"
-                  >
-                    Login
-                  </button>
-                  <p class="typo__p" v-if="submitStatus === 'OK'">
-                    Thanks for your submission!
-                  </p>
-                  <p class="typo__p" v-if="submitStatus === 'ERROR'">
-                    Please fill the form correctly.
-                  </p>
-                  <p class="typo__p" v-if="submitStatus === 'PENDING'">
-                    Sending...
-                  </p>
+                <button
+                  class="button"
+                  type="submit"
+                  :disabled="submitStatus === 'PENDING'"
+                >
+                  Next
+                </button>
+                <p class="typo__p" v-if="submitStatus === 'OK'">
+                  Thanks for your submission!
+                </p>
+                <p class="typo__p" v-if="submitStatus === 'ERROR'">
+                  Please fill the form correctly.
+                </p>
+                <p class="typo__p" v-if="submitStatus === 'PENDING'">
+                  Sending...
+                </p>
 
-                  <router-link to="forgotPassword" class="text-center"
-                    >Forgot Password</router-link
-                  >
-                </form>
+                <router-link to="newPassword" class="text-center"
+                  >New Password</router-link
+                >
+              </form>
 
                 <p class="end-para">
                   Don't have an account?
