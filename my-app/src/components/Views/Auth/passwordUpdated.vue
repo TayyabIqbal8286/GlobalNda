@@ -63,7 +63,7 @@
 </template>
 
 <script>
-import AuthLeft from './authLeft.vue';
+import AuthLeft from './AuthLeft.vue';
 import darkMode from "./darkMode.vue";
 export default {
   name: "passwordUpdated",

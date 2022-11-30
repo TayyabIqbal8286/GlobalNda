@@ -5,8 +5,10 @@
         <div class="row no-gutter">
           <div class="col-md-6 d-none d-md-block">
             <div class="left-side">
-              <authLeft msg="Lorem Ipsum is simply dummy text of the printing"
-              btn="Read More" />
+              <authLeft
+                msg="Lorem Ipsum is simply dummy text of the printing"
+                btn="Read More"
+              />
             </div>
           </div>
 
@@ -147,7 +149,6 @@
                   <img src="@/assets/images/Ellipse 2.png" alt="" />
                 </div>
               </div>
-              
             </div>
           </div>
         </div>
@@ -165,7 +166,7 @@ import {
   maxLength,
   sameAs,
 } from "vuelidate/lib/validators";
-import AuthLeft from './authLeft.vue';
+import AuthLeft from "./AuthLeft.vue";
 
 export default {
   name: "newPassword",

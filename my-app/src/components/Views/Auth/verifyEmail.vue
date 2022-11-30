@@ -160,7 +160,7 @@ import {
   maxLength,
   email,
 } from "vuelidate/lib/validators";
-import AuthLeft from './authLeft.vue';
+import AuthLeft from './AuthLeft.vue';
 
 export default {
   name: "verifyEmail",

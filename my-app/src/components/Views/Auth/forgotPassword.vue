@@ -115,7 +115,7 @@
 
 <script>
 import darkMode from "./darkMode.vue";
-import authLeft from "./authLeft.vue"
+import authLeft from "./AuthLeft.vue"
 import {
   required,
   minLength,

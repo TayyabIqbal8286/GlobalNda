@@ -5,11 +5,7 @@
         <div class="row no-gutter">
           <div class="col-md-6 d-none d-md-block">
             <div class="left-side">
-              <authLeft
-                msg="Simplify your NDA today. Sign up to enjoy the perks!"
-                msg2="Already a member?"
-                btn="Sign In"
-              />
+              <authLeft :msg="msg" msg2="Already a member?" btn="Sign In" />
             </div>
           </div>
 
@@ -105,6 +101,7 @@
                     <div class="form-icon">
                       <!-- <img src="../../assets/images/name-icon.png" alt="" /> -->
                       <i class="fa fa-lock"></i>
+                      <i class="fa fa-eye"></i>
                     </div>
                     <input
                       type="password"
@@ -160,6 +157,10 @@
                 </form>
               </div>
 
+              <div class="c-box">
+                <recaptcha />
+              </div>
+
               <div
                 class="
                   mbl-circle
@@ -184,6 +185,7 @@
 </template>
 
 <script>
+import recaptcha from "./recaptcha.vue";
 import darkMode from "./darkMode.vue";
 import {
   required,
@@ -191,13 +193,15 @@ import {
   maxLength,
   email,
 } from "vuelidate/lib/validators";
-import AuthLeft from "./authLeft.vue";
+import AuthLeft from "./AuthLeft.vue";
 
 export default {
   name: "register",
+
   components: {
     darkMode,
     AuthLeft,
+    recaptcha,
   },
   data() {
     return {
@@ -206,6 +210,7 @@ export default {
         email: "",
         password: "",
       },
+      msg: "Simplify your NDA today. Sign up to enjoy the perks!",
       submitStatus: null,
     };
   },
@@ -240,6 +245,7 @@ export default {
         this.submitStatus = "PENDING";
         setTimeout(() => {
           this.submitStatus = "OK";
+          this.$router.push("./login");
         }, 500);
       }
     },
